@@ -1,5 +1,5 @@
 # CursoEmVideoJS
-Exercícios realizados durante o curso de JS oferecido pelo Curso Em Video
+Exercícios realizados durante o curso de JS oferecido pelo [Curso Em Video](https://github.com/cursoemvideo).
 
 * aula04: anotações sobre JavaScript;
 * aula11: verificação se é ou não brasileiro;
