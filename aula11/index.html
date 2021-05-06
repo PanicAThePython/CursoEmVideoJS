@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Aula 11</title>
+    <style>
+        body{
+            background-color: rgb(36, 49, 161);
+            font: normal 17px Arial;
+            color: white;
+            margin-left: 20px;
+        }
+        span{
+            color:  rgb(206, 174, 35);
+        }
+        input, button{
+            border-radius: 4px;
+            border: none;
+            padding: 5px;
+        }input:focus, button:focus{
+            outline: 0;
+        }input:focus{
+            border-bottom: 3px solid rgb(206, 174, 35);
+        }
+        button{
+            width: 40px;
+            background-color: rgb(206, 174, 35);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>SuaOrigem<span>.com</span></h1>
+    <p>Informe o seu país de origem:</p>
+    <input type="text" name="pais" id="pais" required>
+    <!-- <input type="button" value="OK" onclick="verificarPais()"> -->
+    <button id="ok">OK</button>
+    <p id="resposta"></p>
+   
+</body>
+<script>
+    var but = document.getElementById('ok')
+    but.addEventListener('click', verificarPais)
+
+    function verificarPais(){
+        var pais = document.getElementById('pais').value.toUpperCase()
+        var resposta = document.getElementById('resposta')
+        if (pais == 'BRASIL'){
+            resposta.innerHTML = `Você é do <strong>${pais}</strong>`
+        }else if(pais == ""){
+            resposta.innerHTML = "Resposta nula"
+        }
+        else{
+            resposta.innerHTML = `Você é estrangeiro, do país <strong>${pais}</strong>`
+        }
+    }
+</script>
+</html>
